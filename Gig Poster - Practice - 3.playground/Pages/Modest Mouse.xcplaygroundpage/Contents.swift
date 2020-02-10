@@ -37,14 +37,7 @@ canvas.fillColor = darkGrey
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
-// draw grid
-canvas.drawShapesWithBorders = true
-canvas.drawShapesWithFill = false
-for y in stride (from: 0, through: 600, by: 50){
-    for x in stride (from: 0, through: 400, by: 50){
-        canvas.drawRectangle(at: Point(x: x, y: y), width: 50, height: 50)
-    }
-}
+
 
 // draw diagonal line
 canvas.rotate(by: -45)
@@ -61,10 +54,40 @@ for x in stride(from: -300, to: 400, by: 40){
     
     canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 700), lineWidth: 20)
 }
-    
+
+// counter rotate
+canvas.rotate(by: 45)
+
 // draw another background
+canvas.drawShapesWithBorders = false
+canvas.fillColor = darkGrey
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
+// draw text
+canvas.drawText(message: "at the speak in tounges social hall", at: Point(x: 17, y: 570), size: 8)
+canvas.drawText(message: "4311 lorain ave. / cleveland, oh", at: Point(x: 17, y: 560), size: 8)
 
 
+canvas.drawText(message: "saturday / august 224 1996", at: Point(x: 200, y: 570), size: 8)
+canvas.drawText(message: "10 pm, all invited", at: Point(x: 200, y: 560), size: 8)
+
+
+canvas.drawText(message: "with old hearts club", at: Point(x: 300, y: 570), size: 8)
+canvas.drawText(message: "and melk", at: Point(x: 300, y: 560), size:8)
+
+
+canvas.drawText(message: "modest mouse", at: Point(x: 17, y: 410), size: 40)
+
+
+
+//// draw grid
+//canvas.drawShapesWithBorders = true
+//canvas.drawShapesWithFill = false
+//for y in stride (from: 0, through: 600, by: 50){
+//    for x in stride (from: 0, through: 400, by: 50){
+//        canvas.drawRectangle(at: Point(x: x, y: y), width: 50, height: 50)
+//    }
+//}
 /*:
  ## Use Source Control
  
